@@ -8,12 +8,13 @@ module.exports = {
   plugins: [new MiniCssExtractPlugin({ filename: 'styles.css' })],
   devtool: "source-map",
   devServer: {
-    static: "./dist"
+    static: "./dist",
+    hot: true
   },
   
   module: {
     rules: [{
-      test: /\.css$/,
+      test: /\.(css|scss)$/,
       use: [
         {
           loader: MiniCssExtractPlugin.loader,
@@ -23,6 +24,9 @@ module.exports = {
           options: {
             sourceMap: process.env.NODE_ENV !== 'production',
           },
+        },
+        {
+          loader: "sass-loader",
         },
       ],
     },{
