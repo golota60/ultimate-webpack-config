@@ -1,3 +1,4 @@
+import './styles/styles.css';
 const recipe = {
   ham: 3,
   cheese: 2
