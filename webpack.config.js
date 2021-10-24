@@ -16,26 +16,16 @@ module.exports = {
     rules: [{
       test: /\.(css|scss)$/,
       use: [
-        {
-          loader: MiniCssExtractPlugin.loader,
-        },
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: process.env.NODE_ENV !== 'production',
-          },
-        },
-        {
-          loader: "sass-loader",
-        },
+        MiniCssExtractPlugin.loader,
+        'css-loader',
+        'postcss-loader',
+        'sass-loader',
       ],
     },{
       test: /\.js$/,
       exclude: /node_modules/,
       use: [
-      {
-        loader: "babel-loader",
-      },    
+      'babel-loader',
       {
         loader: '@linaria/webpack-loader',
         options: {

@@ -1,9 +1,5 @@
-@import '_variables.scss';
+@use 'global';
 
-body {
-  margin: 0;
-}
-
-h1 {
-  background-color: $bg-color;
+.example {
+  color: green;
 }
