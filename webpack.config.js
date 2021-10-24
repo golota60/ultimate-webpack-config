@@ -16,6 +16,11 @@ module.exports = {
     extensions: ['.js', '.jsx']
   },
 
+  // Put all images in a separate directory
+  output: {
+    assetModuleFilename: "images/[hash][ext][query]"
+  },
+
   module: {
     rules: [
       {
@@ -23,10 +28,10 @@ module.exports = {
       use: ['@svgr/webpack'],
       },
       // If any issues with images come up, uncomment this
-      // {
-      //   test: /\.(png|jpe?g|gif)/i,
-      //   type: 'asset/resource'
-      // },
+      {
+        test: /\.(png|jpg|jpeg|gif)/i,
+        type: 'asset' // Inlines all images under 8kB - Change to 'asset/resource' to not inline images or to 'asset/inline' to inline all images
+      },
       {
         test: /\.(css|scss)$/,
         use: [
