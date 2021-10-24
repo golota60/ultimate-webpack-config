@@ -1,17 +1,21 @@
 import React from 'react';
-import { css } from '@linaria/core';
+import { styled } from '@linaria/react';
+import Counter from './components/Counter';
 
-const header = css`
-  text-transform: uppercase;
-  background-color: lightblue;
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 const App = () => {
   return (
-    <h2 className={header}>
-      I am an app
-    </h2>
+    <AppContainer>
+      Hello 👋 Have fun with your project.
+      <Counter />
+    </AppContainer>
   )
 }
 
-export default App
+export default App;
