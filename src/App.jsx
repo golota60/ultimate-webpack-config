@@ -1,6 +1,7 @@
 import React from 'react';
 import { styled } from '@linaria/react';
 import Counter from './components/Counter';
+import Svg from './assets/doodle.svg';
 
 const AppContainer = styled.div`
   display: flex;
@@ -12,7 +13,8 @@ const AppContainer = styled.div`
 const App = () => {
   return (
     <AppContainer>
-      Hello 👋 Have fun with your project.
+      Hello 👋 Have fun with your project. Here's a happy doodle to help you get going.
+      <Svg />
       <Counter />
     </AppContainer>
   )

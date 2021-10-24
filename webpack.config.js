@@ -17,21 +17,32 @@ module.exports = {
   },
 
   module: {
-    rules: [{
-      test: /\.(css|scss)$/,
-      use: [
-        MiniCssExtractPlugin.loader,
-        'css-loader',
-        'postcss-loader',
-        'sass-loader',
-      ],
-    },{
-      test: /\.(js|jsx)$/,
-      exclude: /node_modules/,
-      use: [
-      'babel-loader',
-      '@linaria/webpack-loader',
-    ]
-    }]
+    rules: [
+      {
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+      },
+      // If any issues with images come up, uncomment this
+      // {
+      //   test: /\.(png|jpe?g|gif)/i,
+      //   type: 'asset/resource'
+      // },
+      {
+        test: /\.(css|scss)$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [
+        'babel-loader',
+        '@linaria/webpack-loader',
+      ]
+      }]
   },
 }

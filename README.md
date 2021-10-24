@@ -5,6 +5,7 @@ This is the entry point for bootstrapping all my react applications. I always sw
 What you get by using this setup:
 - ✅ .scss/.css Hot reloading and source maps
 - ✅ .js/.ts/.jsx/.tsx Hot reloading and source maps
+- ✅ .svg resolutions - can be rendered as react components
 - ✅ Zero runtime CSS thanks to Linaria
 - ✅ Fast compile times thanks to yarn
 - ✅ Less webpack headaches
@@ -28,7 +29,7 @@ Bundle-wise:
 Tool-wise:
 - [yarn](https://github.com/yarnpkg/yarn)
 
-This is state manager agnostic. You need to add your fav state manager yourself.
+> This is state manager agnostic. You need to add your fav state manager yourself.
 
 ### Starting development
 

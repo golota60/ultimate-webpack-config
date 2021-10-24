@@ -5,3 +5,4 @@ yarn-error.log
 .vscode
 .idea
 .linaria-cache
+.DS_Store
