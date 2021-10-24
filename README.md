@@ -1,13 +1,13 @@
-## Ultimate webpack setup
+# Ultimate webpack setup
 
 This is the entry point for bootstrapping all my react applications. I always swap a few things, depending on which tooling I want to use, but generally it all comes down to modifying this repo. I try to keep this up to date. 
 
 What you get by using this setup:
-- [x] .scss/.css Hot reloading and source maps
-- [x] .js/.ts/.jsx/.tsx Hot reloading and source maps
-- [x] Zero runtime CSS thanks to Linaria
-- [x] Fast compile times thanks to yarn
-- [x] Less webpack headaches
+- ✅ .scss/.css Hot reloading and source maps
+- ✅ .js/.ts/.jsx/.tsx Hot reloading and source maps
+- ✅ Zero runtime CSS thanks to Linaria
+- ✅ Fast compile times thanks to yarn
+- ✅ Less webpack headaches
 
 
 If you want to use it too, here are the things that it uses:
@@ -34,7 +34,8 @@ This is state manager agnostic. You need to add your fav state manager yourself.
 
 There's a few things that need to be done to adjust this starter to your needs. 
 
-- Adjust/delete .browserslistrc
+- Check .browserslistrc
+- Check your production [source-maps](#source-maps) policy
 
 ### Source maps
 
