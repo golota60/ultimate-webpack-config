@@ -3,4 +3,5 @@ dist
 yarn-error.log
 
 .vscode
-.idea 
+.idea
+.linaria-cache

@@ -1,20 +1,19 @@
-import { css } from '@linaria/core';
-
+import React from 'react';
+import { render } from 'react-dom';
+import App from './App';
 import './styles/styles.scss';
 
-const recipe = {
-  ham: 3,
-  cheese: 2
-};
+render(<React.StrictMode><App /></React.StrictMode>, document.getElementById('root')) 
 
-const header = css`
-  text-transform: uppercase;
-`;
+const recipe = {
+  hamSlices: 3,
+  cheeseSlices: 2
+};
 
 const enhancedRecipe = {
   ...recipe,
-  dough: 2,
-  cheese: 3
+  doughKilos: 2,
+  cheeseSlices: 3
 };
 
 console.log(recipe);

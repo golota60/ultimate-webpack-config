@@ -64,3 +64,5 @@ To this:
 ```ts
   devtool: process.env.NODE_ENV === 'production' ? false : "source-map",
 ```
+
+You might also want to add hashes to your styles as described [here](https://github.com/callstack/linaria/blob/master/docs/BUNDLERS_INTEGRATION.md#webpack)

@@ -6,12 +6,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: mode,
   plugins: [new MiniCssExtractPlugin({ filename: 'styles.css' })],
-  devtool: process.env.NODE_ENV === 'production' ? false : "source-map",
+  devtool: "source-map",
   devServer: {
     static: "./dist",
     hot: true
   },
-  
+
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+
   module: {
     rules: [{
       test: /\.(css|scss)$/,
@@ -22,7 +26,7 @@ module.exports = {
         'sass-loader',
       ],
     },{
-      test: /\.js$/,
+      test: /\.(js|jsx)$/,
       exclude: /node_modules/,
       use: [
       'babel-loader',
