@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode: mode,
   plugins: [new MiniCssExtractPlugin({ filename: 'styles.css' })],
-  devtool: "source-map",
+  devtool: process.env.NODE_ENV === 'production' ? false : "source-map",
   devServer: {
     static: "./dist",
     hot: true
@@ -26,12 +26,7 @@ module.exports = {
       exclude: /node_modules/,
       use: [
       'babel-loader',
-      {
-        loader: '@linaria/webpack-loader',
-        options: {
-          sourceMap: process.env.NODE_ENV !== 'production',
-        },
-      }
+      '@linaria/webpack-loader',
     ]
     }]
   },
