@@ -1,0 +1,13 @@
+
+# This needs to be tweaked/deleted every time project is set up, cause it's changing rapidly
+# If you don't care about what browsers are being supported, feel free to delete this
+
+Chrome >= 73
+last 4 ChromeAndroid versions
+last 4 Firefox versions
+last 4 FirefoxAndroid versions
+last 4 Edge versions
+IOS >= 11
+Safari >= 11
+not Explorer <= 11
+not Edge < 79
