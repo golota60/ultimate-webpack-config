@@ -5,16 +5,21 @@ import './styles/styles.scss';
 
 const recipe = {
   hamSlices: 3,
-  cheeseSlices: 2
+  cheeseSlices: 2,
 };
 
 const enhancedRecipe = {
   ...recipe,
   doughKilos: 2,
-  cheeseSlices: 3
+  cheeseSlices: 3,
 };
 
 console.log(recipe);
 console.log(enhancedRecipe);
 
-render(<React.StrictMode><AppContainer /></React.StrictMode>, document.getElementById('root')) 
+render(
+  <React.StrictMode>
+    <AppContainer />
+  </React.StrictMode>,
+  document.getElementById('root')
+);

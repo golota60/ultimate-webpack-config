@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { css } from '@linaria/core';
 
 const counterContainer = css`
@@ -18,11 +18,21 @@ const Counter = () => {
 
   return (
     <div className={counterContainer}>
-      <button className={counterButton} onClick={() => setCount(val => val - 1)}>-</button>
+      <button
+        className={counterButton}
+        onClick={() => setCount((val) => val - 1)}
+      >
+        -
+      </button>
       <p>{count}</p>
-      <button className={counterButton} onClick={() => setCount(val => val + 1)}>+</button>
+      <button
+        className={counterButton}
+        onClick={() => setCount((val) => val + 1)}
+      >
+        +
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default Counter
+export default Counter;

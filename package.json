@@ -10,10 +10,7 @@
     "@babel/preset-env": "^7.15.8",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
-    "@linaria/babel-preset": "^3.0.0-beta.13",
-    "@linaria/core": "^3.0.0-beta.13",
-    "@linaria/react": "^3.0.0-beta.13",
-    "@linaria/shaker": "^3.0.0-beta.13",
+    "@callstack/eslint-config": "^11.0.0",
     "@linaria/webpack-loader": "^3.0.0-beta.13",
     "@svgr/webpack": "^5.5.0",
     "@types/react": "^17.0.33",
@@ -21,6 +18,7 @@
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.4.0",
+    "eslint": "^7.32.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.3",
     "postcss": "^8.3.11",
@@ -39,9 +37,14 @@
     "watch": "webpack --watch",
     "build": "NODE_ENV=production webpack",
     "build-dev": "webpack",
-    "clean": "rm -rf dist .linaria-cache"
+    "clean": "rm -rf dist .linaria-cache",
+    "lint": "yarn eslint --ext '.ts,.tsx' ./src --fix"
   },
   "dependencies": {
+    "@linaria/babel-preset": "^3.0.0-beta.13",
+    "@linaria/core": "^3.0.0-beta.13",
+    "@linaria/react": "^3.0.0-beta.13",
+    "@linaria/shaker": "^3.0.0-beta.13",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

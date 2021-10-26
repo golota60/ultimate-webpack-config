@@ -10,18 +10,15 @@ const AppContainer = styled.div`
   justify-content: center;
 `;
 
-interface Props {
-  xd?: string;
-}
-
-const App = (props: Props) => {
+const App = () => {
   return (
     <AppContainer>
-      Hello 👋 Have fun with your project. Here's a happy doodle to help you get going.
+      Hello 👋 Have fun with your project. Here&apos;s a happy doodle to help
+      you get going.
       <Svg />
       <Counter />
     </AppContainer>
-  )
-}
+  );
+};
 
 export default App;

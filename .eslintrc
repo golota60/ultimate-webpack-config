@@ -1,0 +1,13 @@
+{
+  "extends": "@callstack/eslint-config/react",
+  "rules": {
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true,
+        "semi": true
+      }
+    ]
+  }
+}
