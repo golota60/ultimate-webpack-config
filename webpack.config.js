@@ -1,11 +1,19 @@
 
 /** @type {import('webpack').Configuration} */
 const mode = process.env.NODE_ENV || "development";
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
   mode: mode,
-  plugins: [new MiniCssExtractPlugin({ filename: 'styles.css' })],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new MiniCssExtractPlugin({ filename: 'styles.css' }),
+    new HtmlWebpackPlugin({
+      template: "./src/index.html"
+  })],
   devtool: "source-map",
   devServer: {
     static: "./dist",
@@ -18,6 +26,7 @@ module.exports = {
 
   // Put all images in a separate directory
   output: {
+    path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "images/[hash][ext][query]"
   },
 
@@ -27,7 +36,6 @@ module.exports = {
       test: /\.svg$/,
       use: ['@svgr/webpack'],
       },
-      // If any issues with images come up, uncomment this
       {
         test: /\.(png|jpg|jpeg|gif)/i,
         type: 'asset' // Inlines all images under 8kB - Change to 'asset/resource' to not inline images or to 'asset/inline' to inline all images
