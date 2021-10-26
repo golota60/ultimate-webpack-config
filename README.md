@@ -29,6 +29,7 @@ Bundle-wise:
 
 Tool-wise:
 - [yarn](https://github.com/yarnpkg/yarn)
+- [eslint](https://github.com/eslint/eslint)
 
 > This is state manager agnostic. You need to add your fav state manager yourself.
 
