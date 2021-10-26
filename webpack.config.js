@@ -14,6 +14,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/index.html"
   })],
+  entry: './src/index.tsx',
   devtool: "source-map",
   devServer: {
     static: "./dist",
@@ -21,7 +22,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
 
   // Put all images in a separate directory
@@ -34,7 +35,7 @@ module.exports = {
     rules: [
       {
       test: /\.svg$/,
-      use: ['@svgr/webpack'],
+      use: [{loader: '@svgr/webpack'}],
       },
       {
         test: /\.(png|jpg|jpeg|gif)/i,
@@ -50,12 +51,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(tsx)$/,
         exclude: /node_modules/,
         use: [
         'babel-loader',
         '@linaria/webpack-loader',
+        'ts-loader',
       ]
-      }]
+      },
+    ]
   },
 }

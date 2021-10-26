@@ -10,7 +10,11 @@ const AppContainer = styled.div`
   justify-content: center;
 `;
 
-const App = () => {
+interface Props {
+  xd?: string;
+}
+
+const App = (props: Props) => {
   return (
     <AppContainer>
       Hello 👋 Have fun with your project. Here's a happy doodle to help you get going.

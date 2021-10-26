@@ -3,11 +3,12 @@
 This is the entry point for bootstrapping all my react applications. I always swap a few things, depending on which tooling I want to use, but generally it all comes down to modifying this repo. I try to keep this up to date. 
 
 What you get by using this setup:
-- ✅ .scss/.css Hot reloading and source maps
-- ✅ .js/.ts/.jsx/.tsx Hot reloading and source maps
+- ✅ .scss/.css Hot module replacement and source maps
+- ✅ .js/.ts/.jsx/.tsx Hot reloading and source maps(no HMR due to shaky support)
 - ✅ .svg resolutions - can be rendered as react components
-- ✅ Zero runtime CSS thanks to Linaria
-- ✅ Fast compile times thanks to yarn
+- ✅ Zero runtime CSS
+- ✅ Fast compile times
+- ✅ Typescript
 - ✅ Less webpack headaches
 
 
