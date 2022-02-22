@@ -52,7 +52,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(tsx)$/,
+        test: /\.(tsx|ts)$/,
         exclude: /node_modules/,
         use: ["babel-loader", "@linaria/webpack-loader", "ts-loader"],
       },
